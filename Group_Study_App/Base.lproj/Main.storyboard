@@ -11,7 +11,7 @@
         <!--Course List Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Course List Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="Group_Study_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Course List Controller" id="BYZ-38-t0r" customClass="CourseListController" customModule="Group_Study_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
         <!--Quiz List Controller-->
         <scene sceneID="ObS-WX-h9t">
             <objects>
-                <viewController title="Quiz List Controller" id="uPh-wg-KWK" sceneMemberID="viewController">
+                <viewController title="Quiz List Controller" id="uPh-wg-KWK" customClass="QuizListController" customModule="Group_Study_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZuD-Y6-6ts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
         <!--Quiz Controller-->
         <scene sceneID="ItF-Yj-dWI">
             <objects>
-                <viewController title="Quiz Controller" id="4yJ-Nv-BsJ" sceneMemberID="viewController">
+                <viewController title="Quiz Controller" id="4yJ-Nv-BsJ" customClass="QuizController" customModule="Group_Study_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NbH-D2-HiC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
         <!--Leaderboard Controller-->
         <scene sceneID="p0P-De-Euj">
             <objects>
-                <viewController title="Leaderboard Controller" id="afV-OW-4Xv" sceneMemberID="viewController">
+                <viewController title="Leaderboard Controller" id="afV-OW-4Xv" customClass="LeaderboardController" customModule="Group_Study_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fb4-kY-6ok">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
