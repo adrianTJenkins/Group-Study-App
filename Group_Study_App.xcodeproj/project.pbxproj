@@ -16,9 +16,12 @@
 		3ACDEAE62627315900BD4AAC /* CourseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDEAE52627315900BD4AAC /* CourseListController.swift */; };
 		3ACDEAE92627317200BD4AAC /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDEAE82627317200BD4AAC /* QuizController.swift */; };
 		3ACDEAEC2627318700BD4AAC /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACDEAEB2627318700BD4AAC /* LeaderboardController.swift */; };
+		95B1A9C0FB7EDE19EA051FD2 /* Pods_Group_Study_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC6D589D22DE4B954E73D6B /* Pods_Group_Study_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CAEB29E048CEEFEA8EB9B6A /* Pods-Group_Study_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group_Study_App.release.xcconfig"; path = "Target Support Files/Pods-Group_Study_App/Pods-Group_Study_App.release.xcconfig"; sourceTree = "<group>"; };
+		37B13A901BEF7CE3A14C2DF5 /* Pods-Group_Study_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Group_Study_App.debug.xcconfig"; path = "Target Support Files/Pods-Group_Study_App/Pods-Group_Study_App.debug.xcconfig"; sourceTree = "<group>"; };
 		3A4708532619639000507F37 /* Group_Study_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group_Study_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4708562619639000507F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A4708582619639000507F37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		3ACDEAE52627315900BD4AAC /* CourseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListController.swift; sourceTree = "<group>"; };
 		3ACDEAE82627317200BD4AAC /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		3ACDEAEB2627318700BD4AAC /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
+		CCC6D589D22DE4B954E73D6B /* Pods_Group_Study_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Group_Study_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B1A9C0FB7EDE19EA051FD2 /* Pods_Group_Study_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17D29E18EB666569653C9F1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37B13A901BEF7CE3A14C2DF5 /* Pods-Group_Study_App.debug.xcconfig */,
+				2CAEB29E048CEEFEA8EB9B6A /* Pods-Group_Study_App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2F05E62B0F9DD8F4E0A56F5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCC6D589D22DE4B954E73D6B /* Pods_Group_Study_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A47084A2619639000507F37 = {
 			isa = PBXGroup;
 			children = (
 				3A4708552619639000507F37 /* Group_Study_App */,
 				3A4708542619639000507F37 /* Products */,
+				17D29E18EB666569653C9F1A /* Pods */,
+				2F05E62B0F9DD8F4E0A56F5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A4708672619639100507F37 /* Build configuration list for PBXNativeTarget "Group_Study_App" */;
 			buildPhases = (
+				788B4EA626A03FE4878E5378 /* [CP] Check Pods Manifest.lock */,
 				3A47084F2619639000507F37 /* Sources */,
 				3A4708502619639000507F37 /* Frameworks */,
 				3A4708512619639000507F37 /* Resources */,
+				F11658F33A4FDF31868C11AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		788B4EA626A03FE4878E5378 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Group_Study_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11658F33A4FDF31868C11AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Group_Study_App/Pods-Group_Study_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Group_Study_App/Pods-Group_Study_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Group_Study_App/Pods-Group_Study_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A47084F2619639000507F37 /* Sources */ = {
@@ -295,6 +364,7 @@
 		};
 		3A4708682619639100507F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37B13A901BEF7CE3A14C2DF5 /* Pods-Group_Study_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +383,7 @@
 		};
 		3A4708692619639100507F37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CAEB29E048CEEFEA8EB9B6A /* Pods-Group_Study_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
