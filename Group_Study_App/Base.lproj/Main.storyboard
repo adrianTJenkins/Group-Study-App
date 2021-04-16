@@ -125,6 +125,16 @@
                             <constraint firstItem="WQv-6r-6GF" firstAttribute="trailing" secondItem="h2Q-6Q-dng" secondAttribute="trailing" constant="20" id="ekj-ef-alz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="B05-qK-Efa" id="qD3-jj-4Ie"/>
+                        <outlet property="questionProgress" destination="Pzx-eB-f9g" id="CrI-F9-eam"/>
+                        <outlet property="quizLabel" destination="RUk-ja-IO8" id="Tfg-WG-K1e"/>
+                        <outlet property="quizProgress" destination="vJI-t6-lFh" id="tUt-vm-day"/>
+                        <outlet property="singleBtnFour" destination="sZz-ka-WFb" id="ir8-N1-Gt4"/>
+                        <outlet property="singleBtnOne" destination="tJp-aC-KbK" id="Kok-jE-dVL"/>
+                        <outlet property="singleBtnThree" destination="btB-1P-N8H" id="nqr-kB-SSj"/>
+                        <outlet property="singleBtnTwo" destination="phk-bg-KDC" id="x1y-9h-Isf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cP-ko-5HY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,6 +166,32 @@
                                 <rect key="frame" x="87" y="246" width="240" height="379"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ccu-QN-J9H">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ccu-QN-J9H" id="jQW-je-YNg">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUh-ya-3UM">
+                                                    <rect key="frame" x="10" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnu-5n-Oxh">
+                                                    <rect key="frame" x="60" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rj-ph-3kF">
                                 <rect key="frame" x="78" y="706" width="69" height="41"/>
@@ -173,6 +209,12 @@
                         <viewLayoutGuide key="safeArea" id="BSl-mN-CCu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="leaderLabel" destination="Dnu-5n-Oxh" id="1fj-Uo-6Wq"/>
+                        <outlet property="quizLabel" destination="L4e-hc-WZu" id="3u0-9E-fDR"/>
+                        <outlet property="rankLabel" destination="eUh-ya-3UM" id="Z74-h8-TXY"/>
+                        <outlet property="scoreLabel" destination="eY1-8p-rcs" id="fxo-G7-Bgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7U-Ap-TkH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
