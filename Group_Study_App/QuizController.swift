@@ -8,7 +8,18 @@
 import UIKit
 
 class QuizController: UIViewController {
-
+    
+    @IBOutlet weak var quizLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionProgress: UILabel!
+    @IBOutlet weak var quizProgress: UIProgressView!
+    
+    @IBOutlet weak var singleBtnOne: UIButton!
+    @IBOutlet weak var singleBtnTwo: UIButton!
+    @IBOutlet weak var singleBtnThree: UIButton!
+    @IBOutlet weak var singleBtnFour: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

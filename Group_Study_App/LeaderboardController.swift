@@ -9,6 +9,13 @@ import UIKit
 
 class LeaderboardController: UIViewController {
 
+    @IBOutlet weak var quizLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var leaderLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
