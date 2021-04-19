@@ -9,6 +9,8 @@ import UIKit
 
 class QuizListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var quizLabel: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

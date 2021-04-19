@@ -8,7 +8,9 @@
 import UIKit
 
 class CourseListTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var courseLabel: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

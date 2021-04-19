@@ -8,7 +8,10 @@
 import UIKit
 
 class LeaderboardTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
