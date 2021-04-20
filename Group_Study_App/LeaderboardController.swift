@@ -9,6 +9,7 @@ import UIKit
 
 class LeaderboardController: UIViewController {
 
+    @IBOutlet weak var scoreTableView: UITableView!
     @IBOutlet weak var quizLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
 
@@ -31,4 +32,21 @@ class LeaderboardController: UIViewController {
     }
     */
 
+}
+
+extension LeaderboardController:UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in courseTableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ scoreTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userClasses.count
+    }
+    
+    func tableView(_ scoreTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = scoreTableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath);
+        cell.textLabel?.text = quizzes[indexPath.row].name
+        return cell;
+    }
 }
