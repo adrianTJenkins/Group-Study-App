@@ -9,6 +9,8 @@ import UIKit
 
 class QuizListController: UIViewController {
 
+    @IBOutlet weak var courseLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
