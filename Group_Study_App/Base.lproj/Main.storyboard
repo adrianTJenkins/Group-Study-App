@@ -21,26 +21,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6mc-cX-0aA" customClass="CourseListTableViewCell" customModule="Group_Study_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseCell" id="6mc-cX-0aA" customClass="CourseListTableViewCell" customModule="Group_Study_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6mc-cX-0aA" id="IqS-4o-JqR">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djL-lW-TZC">
-                                                    <rect key="frame" x="7" y="4" width="69" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="courseLabel" destination="djL-lW-TZC" id="aOH-9z-I7U"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="c0w-2e-KLz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tsV-cl-p6D"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3C-tS-Xdg">
                                 <rect key="frame" x="158" y="127" width="99" height="51"/>
@@ -55,6 +48,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GuB-sn-ZAw"/>
                     <connections>
+                        <outlet property="courseTableView" destination="IcR-D2-95a" id="w06-L9-06o"/>
                         <outlet property="userLabel" destination="F3C-tS-Xdg" id="nE3-Of-3hD"/>
                     </connections>
                 </viewController>
@@ -82,26 +76,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ILs-oz-qVn" customClass="QuizListTableViewCell" customModule="Group_Study_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quizCell" id="ILs-oz-qVn" customClass="QuizListTableViewCell" customModule="Group_Study_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ILs-oz-qVn" id="uQO-qh-1MO">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faW-G7-QyK">
-                                                    <rect key="frame" x="7" y="4" width="69" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="quizLabel" destination="faW-G7-QyK" id="Jde-uY-rQb"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uPh-wg-KWK" id="5g8-m9-QkB"/>
+                                    <outlet property="delegate" destination="uPh-wg-KWK" id="ulk-As-ONo"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bGc-XS-cWR"/>
@@ -109,6 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="courseLabel" destination="SEN-7v-HNT" id="oyQ-T5-ilE"/>
+                        <outlet property="quizTableView" destination="enj-EV-wRg" id="Bzg-Ep-LJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKz-yL-rnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,35 +200,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ccu-QN-J9H" customClass="LeaderboardTableViewCell" customModule="Group_Study_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="Ccu-QN-J9H" customClass="LeaderboardTableViewCell" customModule="Group_Study_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ccu-QN-J9H" id="jQW-je-YNg">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUh-ya-3UM">
-                                                    <rect key="frame" x="10" y="11" width="41" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnu-5n-Oxh">
-                                                    <rect key="frame" x="60" y="11" width="38" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="rankLabel" destination="eUh-ya-3UM" id="eWr-q0-ruD"/>
-                                            <outlet property="userLabel" destination="Dnu-5n-Oxh" id="Xoc-bo-HJz"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="afV-OW-4Xv" id="yBW-G6-YdF"/>
+                                    <outlet property="delegate" destination="afV-OW-4Xv" id="CBP-Lz-Kvm"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rj-ph-3kF">
                                 <rect key="frame" x="78" y="706" width="69" height="41"/>
@@ -268,6 +240,7 @@
                     <connections>
                         <outlet property="quizLabel" destination="L4e-hc-WZu" id="3u0-9E-fDR"/>
                         <outlet property="scoreLabel" destination="eY1-8p-rcs" id="fxo-G7-Bgk"/>
+                        <outlet property="scoreTableView" destination="aQA-J3-yS0" id="aNd-p8-iHj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7U-Ap-TkH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
