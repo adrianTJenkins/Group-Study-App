@@ -54,6 +54,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="GuB-sn-ZAw"/>
+                    <connections>
+                        <outlet property="userLabel" destination="F3C-tS-Xdg" id="nE3-Of-3hD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,6 +107,9 @@
                         <viewLayoutGuide key="safeArea" id="bGc-XS-cWR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="courseLabel" destination="SEN-7v-HNT" id="oyQ-T5-ilE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKz-yL-rnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
