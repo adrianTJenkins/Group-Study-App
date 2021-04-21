@@ -22,7 +22,9 @@ class CourseListController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        if let selectedIndexPath = courseTableView.indexPathForSelectedRow {
+            courseTableView.deselectRow(at: selectedIndexPath, animated: animated)
+        }
         courseTableView.reloadData()
     }
     
@@ -30,7 +32,17 @@ class CourseListController: UIViewController {
         userLabel.text = user.name
     }
     
-    @IBAction func unwindToCourseView(segue: UIStoryboardSegue) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToClass" {
+            if let indexPath = self.courseTableView.indexPathForSelectedRow {
+                /*
+                let controller = segue.destination as! QuizListController
+                controller.courseLabel.text = userClasses[indexPath.row].name
+                 */
+                currentCourse = userClasses[indexPath.row].name
+                currentCourseID = userClasses[indexPath.row].courseID
+            }
+        }
         
     }
 
@@ -61,4 +73,5 @@ extension CourseListController:UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = userClasses[indexPath.row].name
         return cell;
     }
+    
 }

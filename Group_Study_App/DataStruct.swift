@@ -32,6 +32,15 @@ struct Question {
 }
 
 var user = User(name: "Shaylah", classes: userClasses)
+var currentCourse: String = ""
+var currentCourseID: String = ""
+var currentQuiz: String = ""
+var currentQuizID: String = ""
+var currentQuizScores: [String: Int] = [:]
+var currentQuestion: String = ""
+var currentQuestionID: String = ""
+
+
 
 // Classes
 var userClasses: [Class] = [
@@ -42,9 +51,9 @@ var userClasses: [Class] = [
 
 // Quizzes
 var quizzes: [Quiz] = [
-    Quiz(quizID: "151A", name: "General Knowledge", course: "CSC 151", scores: ["Name": 10]),
-    Quiz(quizID: "152A", name: "General Knowledge", course: "CSC 152", scores: ["Name": 10]),
-    Quiz(quizID: "251A", name: "General Knowledge", course: "CSC 251", scores: ["Name": 10])
+    Quiz(quizID: "151A", name: "General Knowledge", course: "CSC 151", scores: ["Joe": 10]),
+    Quiz(quizID: "152A", name: "General Knowledge", course: "CSC 152", scores: ["Joe": 10]),
+    Quiz(quizID: "251A", name: "General Knowledge", course: "CSC 251", scores: ["Joe": 10])
 ]
 
 // Quiz Questions
