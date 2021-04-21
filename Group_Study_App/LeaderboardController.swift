@@ -12,13 +12,23 @@ class LeaderboardController: UIViewController {
     @IBOutlet weak var scoreTableView: UITableView!
     @IBOutlet weak var quizLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-
+    
+    @IBOutlet weak var quizBackBtn: UIButton!
+    @IBOutlet weak var courseBackBtn: UIButton!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        updateUI()
+    }
+    
+    func updateUI() {
+        courseBackBtn.setTitle(currentCourse, for: .normal)
+        quizLabel.text = currentQuiz
+        scoreLabel.text = "Leaderboard"
     }
     
 
@@ -41,12 +51,12 @@ extension LeaderboardController:UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ scoreTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userClasses.count
+        return currentQuizScores.count
     }
     
     func tableView(_ scoreTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = scoreTableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath);
-        cell.textLabel?.text = quizzes[indexPath.row].name
+        cell.textLabel?.text = "\(Array(currentQuizScores.keys)[indexPath.row]) - \(Array(currentQuizScores.values)[indexPath.row])"
         return cell;
     }
 }

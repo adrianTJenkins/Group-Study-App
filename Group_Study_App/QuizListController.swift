@@ -14,10 +14,28 @@ class QuizListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateUI()
         // Do any additional setup after loading the view.
     }
     
+    func updateUI() {
+        courseLabel.text = currentCourse
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToQuiz" {
+            if let indexPath = self.quizTableView.indexPathForSelectedRow {
+                /*
+                let controller = segue.destination as! QuizListController
+                controller.courseLabel.text = userClasses[indexPath.row].name
+                 */
+                currentQuiz = quizzes[indexPath.row].name
+                currentQuizID = quizzes[indexPath.row].quizID
+                currentQuizScores = quizzes[indexPath.row].scores
+            }
+        }
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -43,7 +61,9 @@ extension QuizListController:UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ quizTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = quizTableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath);
-        cell.textLabel?.text = quizzes[indexPath.row].name
-        return cell;
+        if currentCourseID == quizzes[indexPath.row].course {
+            cell.textLabel?.text = quizzes[indexPath.row].name
+        }
+        return cell
     }
 }
