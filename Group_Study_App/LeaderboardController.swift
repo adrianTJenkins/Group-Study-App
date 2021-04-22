@@ -26,7 +26,6 @@ class LeaderboardController: UIViewController {
     }
     
     func updateUI() {
-        courseBackBtn.setTitle(currentCourse, for: .normal)
         quizLabel.text = currentQuiz
         scoreLabel.text = "Leaderboard"
     }
@@ -45,18 +44,20 @@ class LeaderboardController: UIViewController {
 }
 
 extension LeaderboardController:UITableViewDelegate, UITableViewDataSource {
-    
     func numberOfSections(in courseTableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ scoreTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentQuizScores.count
+        return currentScores.count
     }
     
     func tableView(_ scoreTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sortedQuery = (database.child(currentQuizID).queryOrdered(byChild: "score"))
         let cell = scoreTableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath);
-        cell.textLabel?.text = "\(Array(currentQuizScores.keys)[indexPath.row]) - \(Array(currentQuizScores.values)[indexPath.row])"
+        cell.textLabel?.text = "\(user.name) - \(String(describing: currentScores[user.name])): \(sortedQuery)"
         return cell;
     }
+ 
 }
+

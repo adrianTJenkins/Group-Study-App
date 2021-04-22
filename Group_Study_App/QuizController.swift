@@ -46,12 +46,21 @@ class QuizController: UIViewController {
             if questionIndex < quizQuestions.count {
                 updateUI()
             } else {
-                currentQuizScores[user.name] = score
-                
+                addScore()
                 performSegue(withIdentifier: "goToLeaderboard", sender: nil)
             }
     }
 
+    func addScore() {
+        currentScores[user.name] = score
+        let object: [String: Any] = [
+            "name": "\(user.name)" as NSObject,
+            "score": "\(score)"
+        ]
+        guard let key = database.child(currentQuizID).childByAutoId().key else { return }
+        let childUpdate = ["\(currentQuizID)/\(key)": object]
+        database.updateChildValues(childUpdate)
+    }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         let currentAnswers = quizQuestions[questionIndex].answers

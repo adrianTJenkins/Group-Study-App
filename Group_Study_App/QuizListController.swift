@@ -31,7 +31,6 @@ class QuizListController: UIViewController {
                  */
                 currentQuiz = quizzes[indexPath.row].name
                 currentQuizID = quizzes[indexPath.row].quizID
-                currentQuizScores = quizzes[indexPath.row].scores
             }
         }
         

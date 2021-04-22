@@ -5,18 +5,19 @@
 //  Created by Adrian Jenkins on 4/3/21.
 //
 
-import UIKit
 import Firebase
+import UIKit
+//import Firebase
 
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-    var ref: DatabaseReference = Database.database("https://group-study-app-291-default-rtdb.firebaseio.com").reference()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //FirebaseApp.configure()
         FirebaseApp.configure()
         return true
     }

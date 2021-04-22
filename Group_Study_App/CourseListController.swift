@@ -16,6 +16,8 @@ class CourseListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //database.child("user").setValue(user as NSObject)
+        user = User(name: students[Int.random(in: 0..<students.count)], classes: userClasses)
         updateUI()
         // Do any additional setup after loading the view.
     }

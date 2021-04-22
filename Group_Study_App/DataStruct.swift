@@ -4,8 +4,10 @@
 //
 //  Created by Adrian Jenkins on 4/19/21.
 //
-
+import FirebaseDatabase
 import Foundation
+
+let database = Database.database().reference()
 
 struct User {
     var name: String
@@ -21,7 +23,6 @@ struct Quiz {
     var quizID: String
     var name: String
     var course: String
-    var scores: [String: Int]
 }
 
 struct Question {
@@ -31,15 +32,17 @@ struct Question {
     var quiz: String
 }
 
-var user = User(name: "Shaylah", classes: userClasses)
+var students = ["Kayla", "Dylan", "Shaylah", "Adrian", "Donnell", "Leslie", "Stephen"]
+
+var user: User = User(name: "Joe", classes: userClasses);
+//user = User(name: students[Int.random(in: 0..<students.count)], classes: userClasses)
 var currentCourse: String = ""
 var currentCourseID: String = ""
 var currentQuiz: String = ""
 var currentQuizID: String = ""
-var currentQuizScores: [String: Int] = [:]
 var currentQuestion: String = ""
 var currentQuestionID: String = ""
-
+var currentScores: [String: Int] = [:]
 
 
 // Classes
@@ -51,9 +54,9 @@ var userClasses: [Class] = [
 
 // Quizzes
 var quizzes: [Quiz] = [
-    Quiz(quizID: "151A", name: "General Knowledge", course: "CSC 151", scores: ["Joe": 10]),
-    Quiz(quizID: "152A", name: "General Knowledge", course: "CSC 152", scores: ["Joe": 10]),
-    Quiz(quizID: "251A", name: "General Knowledge", course: "CSC 251", scores: ["Joe": 10])
+    Quiz(quizID: "151A", name: "General Knowledge", course: "CSC 151"),
+    Quiz(quizID: "152A", name: "General Knowledge", course: "CSC 152"),
+    Quiz(quizID: "251A", name: "General Knowledge", course: "CSC 251")
 ]
 
 // Quiz Questions

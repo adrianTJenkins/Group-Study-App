@@ -29,7 +29,7 @@
             <objects>
                 <viewController title="Course List Controller" id="BYZ-38-t0r" customClass="CourseListController" customModule="Group_Study_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3C-tS-Xdg">
@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEN-7v-HNT">
-                                <rect key="frame" x="176.5" y="121" width="61.5" height="31.5"/>
+                                <rect key="frame" x="176.5" y="65" width="61.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -298,7 +298,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-9h-w4n">
-                                                <rect key="frame" x="0.0" y="0.0" width="241" height="27"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Try Again"/>
                                                 <connections>
@@ -306,11 +306,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rj-ph-3kF">
-                                                <rect key="frame" x="241" y="0.0" width="173" height="27"/>
+                                                <rect key="frame" x="191" y="0.0" width="223" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Main Menu"/>
                                                 <connections>
-                                                    <segue destination="uPh-wg-KWK" kind="show" id="7hS-Bh-TGJ"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="uod-wQ-Q9E"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -344,8 +344,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Lwx-7L-KXv"/>
         <segue reference="YRU-9n-s7p"/>
-        <segue reference="7hS-Bh-TGJ"/>
+        <segue reference="uod-wQ-Q9E"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
