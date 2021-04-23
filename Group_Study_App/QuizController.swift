@@ -92,11 +92,13 @@ class QuizController: UIViewController {
         let totalProgress = Float(questionIndex) /
             Float(quizQuestions.count)
         navigationItem.title = "Question #\(questionIndex + 1)"
+        quizLabel.text = currentQuiz
         questionLabel.text = currentQuestion.text
         singleBtnOne.setTitle(currentQuestion.answers[0], for: .normal)
         singleBtnTwo.setTitle(currentQuestion.answers[1], for: .normal)
         singleBtnThree.setTitle(currentQuestion.answers[2], for: .normal)
         singleBtnFour.setTitle(currentQuestion.answers[3], for: .normal)
+        questionProgress.text = "\(questionIndex)/\(quizQuestions.count)"
         quizProgress.setProgress(totalProgress, animated:
             true)
     }
